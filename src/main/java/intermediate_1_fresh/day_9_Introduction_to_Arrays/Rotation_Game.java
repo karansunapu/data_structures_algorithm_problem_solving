@@ -1,0 +1,31 @@
+package intermediate_1_fresh.day_9_Introduction_to_Arrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Rotation_Game {
+    public static void main(String[] args) {
+
+        int[] arr = {1,2,3,4,5};
+
+        // rotate ab
+        // rotate a
+        // rotate b
+        reverse(arr, 0, arr.length-1);
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    public static void reverse(int[] arr, int start, int end) {
+
+        while (start<=end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++; end--;
+        }
+
+    }
+}
